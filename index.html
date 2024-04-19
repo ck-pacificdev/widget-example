@@ -15,7 +15,7 @@
 				var existingScriptBlock = document.getElementsByTagName("script")[0];
 				newScriptBlock.type = "text/javascript";
 				newScriptBlock.async = true;
-				newScriptBlock.src = `https://raw.githubusercontent.com/ck-pacificdev/widget-example/main/${xhr.response.widgets.onewidget.latest}`;
+				newScriptBlock.src = `https://ck-pacificdev.github.io/widget-example/${xhr.response.widgets.onewidget.latest}`;
 				existingScriptBlock.parentNode.insertBefore(newScriptBlock, existingScriptBlock);
 			};
 			
