@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+		
+			const xhr = new XMLHttpRequest()
+			xhr.open("GET", "https://raw.githubusercontent.com/ck-pacificdev/widget-example/main/latest.json");
+			xhr.responseType = 'json';
+			xhr.send();
+			xhr.onload = function() {
+				var newScriptBlock = document.createElement("script");
+				var existingScriptBlock = document.getElementsByTagName("script")[0];
+				newScriptBlock.type = "text/javascript";
+				newScriptBlock.async = true;
+				newScriptBlock.src = `https://raw.githubusercontent.com/ck-pacificdev/widget-example/main/${xhr.response.widgets.onewidget.latest}`;
+				existingScriptBlock.parentNode.insertBefore(newScriptBlock, existingScriptBlock);
+			};
+			
+        </script>
+    </body>
+</html>

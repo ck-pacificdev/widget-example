@@ -1,0 +1,10 @@
+{
+  "widgets": {
+	"onewidget": {
+	  "latest": "onewidget.12345.js"
+	},
+	"twowidget": {
+	  "latest": "twowidget.67890.js"
+	}
+  }
+}
